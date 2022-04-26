@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
+import Button from './src/components/Button';
 
 const Section = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,18 +47,25 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text>Welcome</Text>
-          <Text style={styles.highlight}>App.js</Text>
-        </View>
-      </ScrollView>
+      <View style={styles.buttons}>
+        <Button label="AC" onPress={() => {}} />
+        <Button label="/" onPress={() => {}} />
+        <Button label="7" onPress={() => {}} />
+        <Button label="8" onPress={() => {}} />
+        <Button label="9" onPress={() => {}} />
+        <Button label="*" onPress={() => {}} />
+        <Button label="4" onPress={() => {}} />
+        <Button label="5" onPress={() => {}} />
+        <Button label="6" onPress={() => {}} />
+        <Button label="-" onPress={() => {}} />
+        <Button label="1" onPress={() => {}} />
+        <Button label="2" onPress={() => {}} />
+        <Button label="3" onPress={() => {}} />
+        <Button label="+" onPress={() => {}} />
+        <Button label="0" onPress={() => {}} />
+        <Button label="." onPress={() => {}} />
+        <Button label="=" onPress={() => {}} />
+      </View>
     </SafeAreaView>
   );
 };
@@ -65,6 +73,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   buttons: {
     flexDirection: 'row',
